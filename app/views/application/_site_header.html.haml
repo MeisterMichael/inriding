@@ -3,7 +3,7 @@
 	.container
 		.row
 			.col-md-3
-				%ul.social-icon
+				-# %ul.social-icon
 					- if User.me.social_id(:twitter).present?
 						%li
 							%a.icon-twitter{:href => "http://twitter.com/#{User.me.social_id(:twitter)}"}
@@ -35,7 +35,7 @@
 					%a{:href => swell_media.root_path(), :rel => "home"}
 						= SwellMedia.app_name
 
-				%p.site-description - Life, Health and Growth -
+				%p.site-description - Discovering and Sharing Great Rides -
 			/ .col-md-6
 			.col-md-3
 				= form_tag swell_media.category_path( :all ), method: :get, class: 'search-form' do
@@ -64,19 +64,20 @@
 							%ul#primary-menu.menu.nav-menu{"aria-expanded" => "false"}
 								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.root_path() ) }
 									%a{:href => swell_media.root_path() } Home
-								%li.menu-item.menu-item-has-children.hidden-xs{"aria-haspopup" => "true"}
-									%a{:href => "#"} Features
-									%ul.sub-menu
-										- @featured_results.each do |media|
-											%li.menu-item
-												%a{:href => media.url}=media.title
-								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.category_path(:food) ) }
-									%a{:href => swell_media.category_path(:food)} Food
-								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.category_path(:hacks) ) }
+								-# if @featured_results[0].present?
+									%li.menu-item.menu-item-has-children.hidden-xs{"aria-haspopup" => "true"}
+										%a{:href => "#"} Features
+										%ul.sub-menu
+											- @featured_results.each do |media|
+												%li.menu-item
+													%a{:href => media.url}=media.title
+								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.category_path(:rides) ) }
+									%a{:href => swell_media.category_path(:rides)} Rides
+								-# %li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.category_path(:hacks) ) }
 									%a{:href => swell_media.category_path(:hacks)} Hacks
 								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: main_app.about_path() ) }
-									%a{:href => main_app.about_path()} About Me
-								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.new_contact_path() ) }
+									%a{:href => main_app.about_path()} About
+								-# %li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.new_contact_path() ) }
 									%a{:href => swell_media.new_contact_path()} Contact
 						/ .menu-container
 					/ .col-md-12

@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: <%= 'nourishgent' %>
+  database: <%= 'inriding' %>
   username: <%= ENV["DEV_DATABASE_USERNAME"] || 'postgres' %>
   password: <%= ENV["DEV_DATABASE_PASSWORD"] %>
   host: <%= ENV["DEV_DATABASE_HOST"] || 'localhost' %>
@@ -62,7 +62,7 @@ development:
 test:
   <<: *default
   encoding: unicode
-  database: <%= ENV["TEST_DATABASE"] || 'swell_media_starter_test' %>
+  database: <%= ENV["TEST_DATABASE"] || 'inriding_test' %>
   pool: 5
   username: <%= ENV["DEV_DATABASE_USERNAME"] || 'postgres' %>
   password: <%= ENV["DEV_DATABASE_PASSWORD"] || 'test1234' %>

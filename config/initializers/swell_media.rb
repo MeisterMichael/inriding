@@ -2,13 +2,13 @@
 SwellMedia.configure do |config|
 
 	config.registered_media_types = [ 'SwellMedia::Article', 'SwellMedia::Page' ]
-	config.app_name = 'NourishGent'
+	config.app_name = 'InRiding'
 	config.app_host = ENV['APP_DOMAIN'] || 'localhost:3000'
 	config.article_avatars = ['featured', 'pinterest']
 	config.asset_host = ENV['ASSET_HOST']
-	config.app_description = 'Nourishing life, health and growth'
+	config.app_description = 'Discover the best rides and gear from our community of avid cyclists.'
 	config.app_logo = 'https://media.licdn.com/media/p/1/000/27f/2a3/36f3707.jpg'
-	config.twitter_handle = '@nourishgent'
+	config.twitter_handle = '@inriding'
 	config.max_session_inactivity = 30.minutes
 	config.encryption_secret = 'fdty45u654jtyredhgr4u654etrhdht54eu6e5hdrt5'
 	config.registered_user_class = '::User'

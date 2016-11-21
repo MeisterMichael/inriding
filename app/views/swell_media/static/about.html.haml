@@ -7,18 +7,15 @@
 				.site-entry
 					%article.post.format-standard.hentry
 						.entry-header
-							%h1.entry-title About Me
+							%h1.entry-title About
 						/ .entry-header
 						.entry-content
-							%img.img-responsive.aligncenter{ :src => (User.me.avatar_url( size: :large ) || User.me.avatar_url), 'data-pin-nopin' => 1 }/
+							-# %img.img-responsive.aligncenter{ :src => (User.me.avatar_url( size: :large ) || User.me.avatar_url), 'data-pin-nopin' => 1 }/
 							%p.text-center
-								Hello I’m
-								= succeed "." do
-									%strong=User.me.full_name
 								= User.me.bio
-							%p.text-center Feel free to ask me anything you are wondering about.
-							%h5.text-upper.text-center FOLLOW ME
-							= render 'application/social_icons', args: { class: 'text-center' }
+							-# %p.text-center Feel free to ask me anything you are wondering about.
+							-# %h5.text-upper.text-center FOLLOW ME
+							-# = render 'application/social_icons', args: { class: 'text-center' }
 						/ .entry-content
 					/ .post
 				/ .site-entry

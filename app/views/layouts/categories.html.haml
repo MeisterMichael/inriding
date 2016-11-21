@@ -20,6 +20,12 @@
 						.container
 							.row
 								/ article
+								.col-md-8.col-md-offset-2
+									.site-entry
+										= yield
+								/ .col-md-8
+							-#.row
+								/ article
 								.col-md-8
 									.site-entry
 										= yield

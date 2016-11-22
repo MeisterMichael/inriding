@@ -1,17 +1,48 @@
-- cache( 'home', expires_in: 1.hour ) do
-	- @results.each_with_index do |result, index|
-		- if @results.current_page == 1 && index == 0
-			= render 'swell_media/articles/post', media: result, args: { class: 'first-post' }
-		- else
-			= render 'swell_media/articles/post', media: result, args: {}
+- cache( @page, expires_in: 1.hour ) do
+	- if @page.present?
+		.container
+			.row
+				/ article
+				.col-md-8.col-md-offset-2
+					.site-entry
+						%article.post.format-standard.hentry
+							.entry-header
+								%h1.entry-title=@page.title
+							/ .entry-header
+							.entry-content
+								-# %img.img-responsive.aligncenter{ :src => (User.me.avatar_url( size: :large ) || User.me.avatar_url), 'data-pin-nopin' => 1 }/
+								= raw @page.content
+								-# %p.text-center Feel free to ask me anything you are wondering about.
+								-# %h5.text-upper.text-center FOLLOW ME
+								-# = render 'application/social_icons', args: { class: 'text-center' }
+							/ .entry-content
+						/ .post
+					/ .site-entry
+				/ .col-md-9
+			/ .row
+		/ .container
 
-	%nav.navigation.posts-navigation{:role => "navigation"}
-		%h2.screen-reader-text Posts navigation
-		.nav-links
-			- if @results.current_page < @results.total_pages
-				.nav-previous
-					%a{ :href => swell_media.root_path( page: @results.current_page + 1 ) } Older posts
-			- if @results.current_page > 1
-				.nav-next
-					%a{ :href => swell_media.root_path( page: @results.current_page - 1 ) } Newer posts
-	/ .navigation
+	.container
+		.row
+			/ article
+			.col-md-8.col-md-offset-2
+				.site-entry
+					- @results.each_with_index do |result, index|
+						- if @results.current_page == 1 && index == 0
+							= render 'swell_media/articles/post', media: result, args: { class: 'first-post' }
+						- else
+							= render 'swell_media/articles/post', media: result, args: {}
+
+					%nav.navigation.posts-navigation{:role => "navigation"}
+						%h2.screen-reader-text Posts navigation
+						.nav-links
+							- if @results.current_page < @results.total_pages
+								.nav-previous
+									%a{ :href => swell_media.root_path( page: @results.current_page + 1 ) } Older posts
+							- if @results.current_page > 1
+								.nav-next
+									%a{ :href => swell_media.root_path( page: @results.current_page - 1 ) } Newer posts
+					/ .navigation
+			/ .col-md-8
+		/ .row
+	/ .container

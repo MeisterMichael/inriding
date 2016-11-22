@@ -12,33 +12,14 @@
 	%body.home.blog
 		= render 'application/flash'
 		#page.site
-			- cache( 'application/site_header_features', expires_in: 1.hour ) do
+			-# cache( 'application/site_header_features', expires_in: 1.hour ) do
 				= render 'application/site_header_features', args: {}
 			= render 'application/site_header'
 			/ content
 			#content.site-content
 				#primary.content-area
 					%main#main.site-main{:role => "main"}
-						.container
-							.row
-								/ article
-								.col-md-8.col-md-offset-2
-									.site-entry
-										= yield
-								/ .col-md-8
-							-# .row
-								/ article
-								.col-md-8
-									.site-entry
-										= yield
-								/ .col-md-8
-								- cache( 'application/site_sidebar', expires_in: 1.hour ) do
-									/ sidebar
-									.col-md-4
-										= render 'application/site_sidebar'
-									/ .col-md-4
-							/ .row
-						/ .container
+						= yield
 					/ #main
 				/ #primary
 			/ #content

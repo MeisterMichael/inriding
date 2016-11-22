@@ -38,7 +38,7 @@
 				%p.site-description - Discovering and Sharing Great Rides -
 			/ .col-md-6
 			.col-md-3
-				= form_tag swell_media.category_path( :all ), method: :get, class: 'search-form' do
+				-# = form_tag swell_media.category_path( :all ), method: :get, class: 'search-form' do
 					.form-group
 						%label.sr-only{:for => "search"} Search
 						= text_field_tag :q, '', :placeholder => "Search...", class: 'form-control search-field'

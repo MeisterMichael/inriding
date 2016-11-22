@@ -11,7 +11,7 @@
 						.entry-content
 							-# = render 'application/social_icons', args: { class: 'text-center' }
 							- begin
-								= raw SwellMedia::Page.friendly.find('contact')
+								= raw SwellMedia::Page.friendly.find('contact').content
 							- rescue
 								%p.text-center Fill out the form below with some info about you and the question you want ask.
 							= form_for @contact, html: { class: 'form-horizontal' } do |f|

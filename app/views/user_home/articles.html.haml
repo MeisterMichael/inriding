@@ -1,0 +1,41 @@
+
+- if @articles.present?
+	.container
+		.row
+			.col-xs-12.col-md-8.col-md-offset-2
+				.form-group.text-right
+					%a.btn.btn-primary{ href: '#', data: { toggle: :modal, target: '#new_user_article_modal' } }
+						New Article
+				%table.table.table-bordered
+					%thead
+						%tr
+							%th Title
+							%th{ style: 'width: 6em' } Status
+							%th{ style: 'width: 6em' } &nbsp;
+					%tbody
+						- @articles.each do |article|
+							%tr
+								%td
+									- if article.active?
+										%a{ href: article.url }= article.title
+									- else
+										%a{ href: main_app.preview_user_article_path(article) }= article.title
+								%td.text-center
+									- if article.active?
+										Published
+									- else
+										= article.status
+								%td.text-center
+									%a{ href: main_app.edit_user_article_path( article ) }
+										%i.fa.fa-pencil
+- else
+	.container
+		.row
+			.col-xs-12.col-md-8.col-md-offset-2
+				.text-center
+					%a.btn.btn-primary.btn-lg{ href: '#', data: { toggle: :modal, target: '#new_user_article_modal' } }
+						Create Your First Article
+
+
+= render 'user_articles/new_modal'
+

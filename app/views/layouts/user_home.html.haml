@@ -1,0 +1,41 @@
+!!!strict
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+//[if gt IE 8] <html class="no-js">
+%html{:lang => "en"}
+	%head
+		= render 'application/fb_login_popup_closer'
+		= render 'application/html_head', args: {}
+		= render 'application/header_styles'
+		= render 'application/header_scripts'
+	%body.home.blog
+		#page.site
+			= render 'application/site_header'
+			/ content
+			#content.site-content
+				#primary.content-area
+					%main#main.site-main{:role => "main"}
+						.form-group
+							%h5.text-center
+								- if action_name == 'articles'
+									%strong My Rides
+									|
+									%a{ href: main_app.profile_user_home_path() }
+										Edit Profile
+								- else
+									%a{ href: main_app.articles_user_home_path() }
+										My Rides
+									|
+									%strong Edit Profile
+
+						= render 'application/flash'
+						= yield
+					/ #main
+				/ #primary
+			/ #content
+			- cache( 'application/footer' ) do
+				= render 'application/footer'
+		/ #page
+		- cache( 'application/footer_scripts' ) do
+			= render 'application/footer_scripts'

@@ -62,8 +62,12 @@
 							%span.sr-only Primary Menu
 						.menu-container
 							%ul#primary-menu.menu.nav-menu{"aria-expanded" => "false"}
-								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.root_path() ) }
-									%a{:href => swell_media.root_path() } Home
+								- if current_user.present?
+									%li.menu-item{ class: set_css_if( class: 'current-menu-item', controller: 'user_home' ) }
+										%a{:href => main_app.articles_user_home_path() } Home
+								- else
+									%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.root_path() ) }
+										%a{:href => swell_media.root_path() } Home
 								-# if @featured_results[0].present?
 									%li.menu-item.menu-item-has-children.hidden-xs{"aria-haspopup" => "true"}
 										%a{:href => "#"} Features
@@ -75,10 +79,22 @@
 									%a{:href => swell_media.category_path(:rides)} Rides
 								-# %li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.category_path(:hacks) ) }
 									%a{:href => swell_media.category_path(:hacks)} Hacks
-								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: main_app.about_path() ) }
+								-# %li.menu-item{ class: set_css_if( class: 'current-menu-item', path: main_app.about_path() ) }
 									%a{:href => main_app.about_path()} About
 								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.new_contact_path() ) }
 									%a{:href => swell_media.new_contact_path()} Contact
+								-# if current_user.present?
+
+									%li.menu-item
+										%a{ href: swell_media.logout_path() }
+											Log Out
+								-# else
+									%li.menu-item
+										%a{:href => swell_media.login_path()} Login
+									%li.menu-item
+										%a{:href => swell_media.new_user_registration_path()} Sign Up
+
+
 						/ .menu-container
 					/ .col-md-12
 				/ .row

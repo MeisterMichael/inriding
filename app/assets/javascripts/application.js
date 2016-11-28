@@ -15,7 +15,6 @@
 //= require jquery-ui
 // //= require turbolinks
 //= require ./theme/bootstrap/js/bootstrap
-//= require ./theme/bootstrap/js/bootstrap.min.js
 //= require ./theme/plugins/imagesloaded.pkgd.min.js
 //= require ./theme/plugins/owl.carousel.min.js
 //= require ./theme/plugins/masonry.pkgd.min.js
@@ -26,3 +25,4 @@
 //= require swell_media/plugins/jquery.fileupload
 //= require swell_media/plugins/jquery.iframe-transport
 //= require swell_media/plugins/jquery.assetup.js.coffee
+//= require swell_media/custom/wysiwyg

@@ -8,6 +8,15 @@ class ApplicationController < ActionController::Base
 	before_filter :init_page_meta
 	before_filter :featured_results
 
+	def after_sign_in_failure_path
+		'/login?oauth_sign_in=1'
+	end
+
+	def after_sign_in_path_for(resource)
+
+		main_app.articles_user_home_path()
+
+	end
 
 	protected
 	def featured_results

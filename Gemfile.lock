@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/playswell/swell_media.git
-  revision: b84cec801d42ab75f3bdba12fd77789cff1c75df
+  revision: 62c4d33f85bd190f0bf0110f57f5d10002d70335
   branch: refact
   specs:
     swell_media (0.0.1)
@@ -31,7 +31,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    CFPropertyList (2.3.3)
+    CFPropertyList (2.3.4)
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
       actionview (= 4.2.6)
@@ -192,7 +192,7 @@ GEM
       multi_json (~> 1.10)
     fog-local (0.3.1)
       fog-core (~> 1.27)
-    fog-openstack (0.1.17)
+    fog-openstack (0.1.18)
       fog-core (>= 1.40)
       fog-json (>= 1.0)
       ipaddress (>= 0.8)
@@ -368,7 +368,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    staccato (0.5.0)
+    staccato (0.5.1)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)

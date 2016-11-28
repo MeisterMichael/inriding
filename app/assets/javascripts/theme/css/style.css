@@ -312,7 +312,7 @@ hr {
 }
 input[type="submit"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 input[type="button"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
-button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+button:not(.fr-btn):not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 .button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) {
   display: inline-block;
   padding: 8px 20px;
@@ -334,15 +334,15 @@ button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.me
 }
 input[type="submit"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) i,
 input[type="button"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) i,
-button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) i,
+button:not(.fr-btn):not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) i,
 .button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) i,
 input[type="submit"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .fa,
 input[type="button"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .fa,
-button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .fa,
+button:not(.fr-btn):not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .fa,
 .button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .fa,
 input[type="submit"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .glyphicon,
 input[type="button"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .glyphicon,
-button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .glyphicon,
+button:not(.fr-btn):not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .glyphicon,
 .button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) .glyphicon {
   position: relative;
   top: 1px;
@@ -380,7 +380,7 @@ button:focus:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):n
 .button:focus:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 input[type="submit"]:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 input[type="button"]:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
-button:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+button:active:not(.fr-btn):not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 .button:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) {
   color: #ffffff !important;
   border-color: #82b440 !important;

@@ -15,5 +15,8 @@
 								%i.fa.fa-upload
 								upload
 					= f.hidden_field :avatar, class: 'form-control', id: 'user_avatar'
+				.form-group
+					= f.label :short_bio, 'Short Bio'
+					= f.text_area :short_bio, class: 'form-control', rows: 10
 				.form-group.text-center
 					= f.submit 'Update'

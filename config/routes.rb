@@ -55,7 +55,7 @@ Rails.application.routes.draw do
   #   end
 
 	resources :user_articles, except: [:index] do
-		get :preview
+		get :preview, on: :member
 	end
 
 	resource :home, controller: :user_home, as: :user_home, only: [] do

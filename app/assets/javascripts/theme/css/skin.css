@@ -62,7 +62,7 @@ a:hover {
 */
 input[type="submit"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 input[type="button"]:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
-button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+button:not(.fr-btn):not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 .button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) {
   background-color: transparent;
   border: 2px solid #2b2b2b !important;
@@ -94,7 +94,7 @@ button:focus:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):n
 .button:focus:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 input[type="submit"]:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 input[type="button"]:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
-button:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
+button:active:not(.fr-btn):not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit),
 .button:active:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(.menu-toggle):not(.search-submit) {
   color: #ffffff !important;
   border-color: #82b440 !important;

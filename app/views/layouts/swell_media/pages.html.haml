@@ -34,7 +34,7 @@
 					/ #main
 				/ #primary
 			/ #content
-			- cache( 'application/footer' ) do
+			- cache_if( current_user.nil?, 'application/footer' ) do
 				= render 'application/footer'
 		/ #page
 		- cache( 'application/footer_scripts' ) do

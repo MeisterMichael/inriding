@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 // //= require turbolinks
 //= require ./theme/bootstrap/js/bootstrap
 //= require ./theme/bootstrap/js/bootstrap.min.js
@@ -22,3 +23,6 @@
 //= require ./theme/js/skip-link-focus-fix.js
 // //= require custom/theme/js/script.turbolinks.js
 //= require theme/js/script.js
+//= require swell_media/plugins/jquery.fileupload
+//= require swell_media/plugins/jquery.iframe-transport
+//= require swell_media/plugins/jquery.assetup.js.coffee

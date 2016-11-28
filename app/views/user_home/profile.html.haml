@@ -1,0 +1,19 @@
+.container
+	.row
+		.col-xs-12.col-md-4.col-md-offset-4
+			= form_for current_user, url: main_app.profile_update_user_home_path() do |f|
+				.form-group
+					= f.label :full_name, 'Full Name'
+					= f.text_field :full_name, class: 'form-control'
+				.form-group
+					= f.label :avatar, 'Avatar'
+					.row
+						.col-xs-4
+							= image_tag current_user.avatar_url, class: 'img-responsive', id: 'user_avatar_img'
+						.col-xs-8
+							%a{ href: '#', data: { toggle: :assetup, for: '#user_avatar,#user_avatar_img', asset: { asset_type: 'image', use: 'avatar', status: 'active', parent_obj_id: current_user.id, parent_obj_type: current_user.class.base_class.name }.to_json, params: { authenticity_token: form_authenticity_token() }.to_json } }
+								%i.fa.fa-upload
+								upload
+					= f.hidden_field :avatar, class: 'form-control', id: 'user_avatar'
+				.form-group.text-center
+					= f.submit 'Update'

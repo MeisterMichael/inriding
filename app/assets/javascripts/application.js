@@ -26,3 +26,5 @@
 //= require swell_media/plugins/jquery.iframe-transport
 //= require swell_media/plugins/jquery.assetup.js.coffee
 //= require swell_media/custom/wysiwyg
+
+$.FroalaEditor.DEFAULTS.key = 'ZptiuywqgD3ali==';

@@ -5,8 +5,11 @@ namespace :import do
 	task tzsak: :environment do
 
 		user = User.friendly.find('inriding')
+		category = SwellMedia::Category.friendly.find('rides')
 
-		urls = ['http://tzsak.com/index.php/mount-shasta-summit-super-century-2005']
+		urls = [
+			# 'http://tzsak.com/index.php/mount-shasta-summit-super-century-2005',
+		]
 
 		a = Mechanize.new { |agent|
 			agent.user_agent_alias = 'Mac Safari'
@@ -20,7 +23,7 @@ namespace :import do
 				article = page.at_css('article')
 				title = article.at_css('h2').text.strip
 
-				media = SwellMedia::Article.create( title: title, user: user, status: 'draft' )
+				media = SwellMedia::Article.create( title: title, user: user, status: 'draft', category: category )
 
 
 				article.css('img').each do |img|

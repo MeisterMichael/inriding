@@ -33,6 +33,7 @@ gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 
 gem 'carrierwave'
+gem 'mechanize'
 gem 'newrelic_rpm'
 gem 'shareable'
 gem 'sitemap_generator'

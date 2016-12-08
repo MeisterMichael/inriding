@@ -2,7 +2,7 @@
 SwellMedia.configure do |config|
 
 	config.registered_media_types = [ 'SwellMedia::Article', 'SwellMedia::Page' ]
-	config.app_name = 'InRiding'
+	config.app_name = 'For The Joy of Cycling'
 	config.app_host = ENV['APP_DOMAIN'] || 'localhost:3000'
 	config.article_avatars = ['featured', 'pinterest']
 	config.asset_host = ENV['ASSET_HOST']

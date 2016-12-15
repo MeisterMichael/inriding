@@ -10,7 +10,7 @@ class UserHomeController < ApplicationController
 		@articles = SwellMedia::Article.where( user: current_user, status: [ SwellMedia::Article.statuses['draft'], SwellMedia::Article.statuses['active'] ] ).order(title: :asc)
 
 
-		@articles = @articles.page(params[:page]).per(8)
+		@articles = @articles.page(params[:page]).per(10)
 
 	end
 

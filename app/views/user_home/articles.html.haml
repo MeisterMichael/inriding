@@ -28,6 +28,9 @@
 								%td.text-center
 									%a{ href: main_app.edit_user_article_path( article ) }
 										%i.fa.fa-pencil
+
+
+				= raw paginate @articles
 - else
 	.container
 		.row

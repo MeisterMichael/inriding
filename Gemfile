@@ -42,7 +42,7 @@ gem 'sitemap_generator'
 # gem 'swell_media', path: '../../engines/swell_media'
 
 # prod
-gem 'swell_media', git: 'git://github.com/playswell/swell_media.git', branch: 'refact'
+gem 'swell_media', git: 'git://github.com/Groundswell/swell_media.git'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

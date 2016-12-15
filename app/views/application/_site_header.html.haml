@@ -81,8 +81,12 @@
 									%a{:href => swell_media.category_path(:hacks)} Hacks
 								-# %li.menu-item{ class: set_css_if( class: 'current-menu-item', path: main_app.about_path() ) }
 									%a{:href => main_app.about_path()} About
-								%li.menu-item{ class: set_css_if( class: 'current-menu-item', path: swell_media.new_contact_path() ) }
-									%a{:href => swell_media.new_contact_path()} Contact
+								- if current_user.present?
+									%li.menu-item
+										%a{ href: swell_media.logout_path() } Log Out
+								- else
+									%li.menu-item
+										%a{:href => swell_media.new_user_registration_path()} Register
 								-# if current_user.present?
 
 									%li.menu-item

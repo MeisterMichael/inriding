@@ -27,4 +27,4 @@
 //= require swell_media/plugins/jquery.assetup.js.coffee
 //= require swell_media/custom/wysiwyg
 
-$.FroalaEditor.DEFAULTS.key = 'ZptiuywqgD3ali==';
+$.FroalaEditor.DEFAULTS.key = '0rzdcpB-13pterxG-7ybnjjbH4dgd==';

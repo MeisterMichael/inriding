@@ -13,14 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-// //= require turbolinks
 //= require ./theme/bootstrap/js/bootstrap
 //= require ./theme/plugins/imagesloaded.pkgd.min.js
 //= require ./theme/plugins/owl.carousel.min.js
 //= require ./theme/plugins/masonry.pkgd.min.js
 //= require ./theme/js/navigation.js
 //= require ./theme/js/skip-link-focus-fix.js
-// //= require custom/theme/js/script.turbolinks.js
 //= require theme/js/script.js
 //= require swell_media/plugins/jquery.fileupload
 //= require swell_media/plugins/jquery.iframe-transport

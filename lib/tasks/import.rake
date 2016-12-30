@@ -75,6 +75,9 @@ namespace :import do
 					end
 
 					asset = media.assets.where( origin_url: complete_url ).first
+					asset ||= media.assets.create( type: 'SwellMedia::ImageAsset', origin_url: complete_url, remote_uploader_url: complete_url, status: :active )
+
+					puts "#{complete_url} => #{asset.url}"
 
 					img['src'] = asset.url
 

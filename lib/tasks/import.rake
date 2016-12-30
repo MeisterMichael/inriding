@@ -54,8 +54,13 @@ namespace :import do
 				article = page.at_css('article')
 				title = article.at_css('h2').text.strip
 
-				media = SwellMedia::Article.create( title: title, user: user, status: 'draft', category: category )
+				puts title
 
+				error() if SwellMedia::Article.where( title: title, user: user ).count > 1
+				media = SwellMedia::Article.where( title: title, user: user ).first
+
+				article.css('h2').remove
+				article.css('.pager').remove
 
 				article.css('img').each do |img|
 
@@ -69,13 +74,13 @@ namespace :import do
 
 					end
 
-					asset = media.assets.create( type: 'SwellMedia::ImageAsset', origin_url: complete_url, remote_uploader_url: complete_url, status: :active )
+					asset = media.assets.where( origin_url: complete_url ).first
 
 					img['src'] = asset.url
 
 				end
 
-				html = article.css('p').collect(&:to_s).join('')
+				html = article.to_s
 
 				media.update( content: html )
 
